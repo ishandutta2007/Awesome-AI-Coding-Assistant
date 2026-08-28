@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.05); }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes dash {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes nodeGlow {
+        0%, 100% { r: 4px; opacity: 0.5; }
+        50% { r: 6.5px; opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+      }
+
+      .bg-grid { opacity: 0.15; }
+      .floating-tag { animation: float 5s ease-in-out infinite; }
+      .floating-tag-delayed { animation: float 6s ease-in-out infinite 1.5s; }
+      .floating-tag-slow { animation: float 7s ease-in-out infinite 3s; }
+      .circuit-line { stroke-dasharray: 200; animation: dash 12s linear infinite; }
+      .pulsing-orb { animation: pulse 6s ease-in-out infinite; }
+      .node-anim-1 { animation: nodeGlow 3s ease-in-out infinite; }
+      .node-anim-2 { animation: nodeGlow 3.5s ease-in-out infinite 1s; }
+      .node-anim-3 { animation: nodeGlow 4s ease-in-out infinite 2s; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Outer Border -->
+  <rect width="1198" height="358" x="1" y="1" rx="15" fill="none" stroke="url(#primaryGrad)" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Futuristic Ambient Background Orbs -->
+  <circle cx="150" cy="80" r="140" fill="#38bdf8" opacity="0.12" filter="url(#softGlow)" class="pulsing-orb"/>
+  <circle cx="1050" cy="280" r="160" fill="#a855f7" opacity="0.12" filter="url(#softGlow)" class="pulsing-orb"/>
+  <circle cx="600" cy="180" r="180" fill="#6366f1" opacity="0.08" filter="url(#softGlow)"/>
+
+  <!-- Matrix / Grid Pattern -->
+  <g class="bg-grid" stroke="#64748b" stroke-width="0.5">
+    <line x1="100" y1="0" x2="100" y2="360" />
+    <line x1="200" y1="0" x2="200" y2="360" />
+    <line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" />
+    <line x1="500" y1="0" x2="500" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="700" y1="0" x2="700" y2="360" />
+    <line x1="800" y1="0" x2="800" y2="360" />
+    <line x1="900" y1="0" x2="900" y2="360" />
+    <line x1="1000" y1="0" x2="1000" y2="360" />
+    <line x1="1100" y1="0" x2="1100" y2="360" />
+    
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+  </g>
+
+  <!-- Neural / Circuit Nodes Connecting -->
+  <g stroke="#38bdf8" stroke-width="1.5" fill="none" opacity="0.4" class="circuit-line">
+    <path d="M 80,180 L 180,180 L 240,240 L 340,240" />
+    <path d="M 120,80 L 200,80 L 260,140 L 320,140" />
+    <path d="M 860,140 L 940,140 L 980,80 L 1100,80" />
+    <path d="M 880,240 L 960,240 L 1020,180 L 1120,180" />
+  </g>
+
+  <!-- Interactive Glowing Nodes -->
+  <circle cx="80" cy="180" r="4" fill="#38bdf8" class="node-anim-1"/>
+  <circle cx="240" cy="240" r="4" fill="#818cf8" class="node-anim-2"/>
+  <circle cx="260" cy="140" r="4" fill="#c084fc" class="node-anim-3"/>
+  <circle cx="940" cy="140" r="4" fill="#38bdf8" class="node-anim-2"/>
+  <circle cx="980" cy="80" r="4" fill="#818cf8" class="node-anim-1"/>
+  <circle cx="1020" cy="180" r="4" fill="#c084fc" class="node-anim-3"/>
+
+  <!-- Left Floating Pill: Code & Agentic -->
+  <g class="floating-tag">
+    <rect x="70" y="110" width="160" height="38" rx="19" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="150" y="134" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">⚡ Agentic Pair Dev</text>
+  </g>
+
+  <g class="floating-tag-delayed">
+    <rect x="90" y="220" width="170" height="38" rx="19" fill="#1e293b" fill-opacity="0.8" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="175" y="244" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">🧠 Multi-File Editing</text>
+  </g>
+
+  <!-- Right Floating Pills -->
+  <g class="floating-tag-slow">
+    <rect x="960" y="110" width="170" height="38" rx="19" fill="#1e293b" fill-opacity="0.8" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="1045" y="134" fill="#d8b4fe" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">🛡️ Private &amp; Local LLMs</text>
+  </g>
+
+  <g class="floating-tag">
+    <rect x="940" y="220" width="180" height="38" rx="19" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text x="1030" y="244" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" text-anchor="middle">🚀 SaaS &amp; Open Source</text>
+  </g>
+
+  <!-- Center Content Badge -->
+  <g>
+    <!-- Top Pill -->
+    <rect x="470" y="48" width="260" height="28" rx="14" fill="#334155" fill-opacity="0.6" stroke="#818cf8" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="488" cy="62" r="4" fill="#22c55e" filter="url(#glow)"/>
+    <text x="604" y="67" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="1.5">CURATED ECOSYSTEM 2026</text>
+
+    <!-- Main Title -->
+    <text x="600" y="145" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, sans-serif" font-size="44" font-weight="800" fill="url(#primaryGrad)" filter="url(#glow)" letter-spacing="-0.5">
+      Awesome AI Coding Assistant
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="190" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" fill="#94a3b8" letter-spacing="0.2">
+      The definitive guide to AI Pair Programmers, Agentic IDEs &amp; Local Coding LLMs
+    </text>
+
+    <!-- Tech Stack Highlights -->
+    <g transform="translate(340, 235)">
+      <!-- Item 1 -->
+      <rect x="0" y="0" width="115" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="57" y="21" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" text-anchor="middle">🤖 Copilots</text>
+
+      <!-- Item 2 -->
+      <rect x="130" y="0" width="125" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="192" y="21" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" text-anchor="middle">💻 Agentic IDEs</text>
+
+      <!-- Item 3 -->
+      <rect x="270" y="0" width="115" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="327" y="21" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" text-anchor="middle">⌨️ CLI Agents</text>
+
+      <!-- Item 4 -->
+      <rect x="400" y="0" width="120" height="34" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="460" y="21" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600" text-anchor="middle">🔒 Local FIM</text>
+    </g>
+  </g>
+</svg>
