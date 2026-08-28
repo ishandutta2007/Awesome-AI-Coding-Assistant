@@ -28,7 +28,7 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
-- [SaaS/Hosted Platforms](#saas-products)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
 
@@ -40,57 +40,17 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-- **[GitHub Copilot](https://github.com/features/copilot)**  
-
-  Widely adopted AI pair programmer integrated across VS Code, JetBrains, Neovim, and more — strong enterprise adoption and broad IDE coverage.
-
-
-
-- **[Cursor](https://cursor.com/)**  
-
-  AI-native code editor built for agentic, multi-file editing and codebase-aware chat — popular for refactoring and complex changes from natural language.
-
-
-
-- **[Codeium / Windsurf (Devin Desktop)](https://codeium.com/)**  
-
-  AI coding assistant and agentic IDE experience with a strong free tier and multi-file editing capabilities (branding evolved under Cognition).
-
-
-
-- **[Tabnine](https://www.tabnine.com/)**  
-
-  AI code completion focused on privacy, team models, and on-premises options for regulated environments.
-
-
-
-- **[Sourcegraph Cody](https://sourcegraph.com/cody)**  
-
-  AI coding assistant with deep codebase context and search, leveraging Sourcegraph’s code intelligence.
-
-
-
-- **[JetBrains AI Assistant](https://www.jetbrains.com/ai/)**  
-
-  AI features integrated across the JetBrains IDE family (IntelliJ, PyCharm, etc.) for completion, chat, and refactoring.
-
-
-
-- **[Amazon Q Developer](https://aws.amazon.com/q/developer/)**  
-
-  AWS-oriented AI coding assistant for completion, chat, and cloud development workflows.
-
-
-
-- **[Continue (cloud / enterprise options)](https://www.continue.dev/)**  
-
-  Commercial offerings and hosted options built on the open-source Continue coding agent.
-
-
-
-- **[Replit AI](https://replit.com/)**  
-
-  AI assistance embedded in the Replit cloud IDE for building and iterating on projects in the browser.
+| Platform | Description & Key Focus | Starting Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[GitHub Copilot](https://github.com/features/copilot)** | Widely adopted AI pair programmer integrated across VS Code, JetBrains, Visual Studio, and Neovim. | **$10/month** ($100/year for Copilot Pro individual) | **Free Plan**: 2,000 code completions/month and 50 chat & agent requests/month (auto-model selection). |
+| **[Cursor](https://cursor.com/)** | AI-native code editor built for agentic, multi-file editing and codebase-aware chat. | **$20/month** (Pro plan) / **₹649/month** (Cursor Start) | **Hobby Plan**: 14-day Pro trial (unlimited features), followed by 2,000 Tab completions/month & limited agent requests. |
+| **[Codeium / Windsurf (Devin Desktop)](https://codeium.com/)** | AI coding assistant & agentic IDE with Cascade agent and multi-file workflows. | **$20/month** (Pro plan) | **Free Plan**: Unlimited Tab autocomplete & inline edits; light daily and weekly Cascade agent usage quotas. |
+| **[Tabnine](https://www.tabnine.com/)** | AI code completion focused on privacy, team models, and on-premises / VPC deployments for regulated environments. | **$39/user/month** (Code Assistant plan, billed annually) | **90-Day Free Trial**: Full access to Code Assistant features, chat, and context engine during the 90 days (no permanent free tier). |
+| **[Sourcegraph Cody](https://sourcegraph.com/cody)** | AI coding assistant with deep codebase context and search, leveraging Sourcegraph’s code intelligence. | **$19/user/month** (Enterprise Starter plan) | **30-Day Free Trial**: Full enterprise trial with code graph search and context-aware chat (individual free tier retired). |
+| **[JetBrains AI Assistant](https://www.jetbrains.com/ai/)** | AI features integrated across the JetBrains IDE family (IntelliJ, PyCharm, WebStorm, etc.) for completion, chat, and refactoring. | **$10/month** ($100/year for AI Pro individual) | **30-Day Free Trial**: Full AI Pro access; **AI Free plan**: Unlimited local code completion + 3 cloud AI credits per 30 days. |
+| **[Amazon Q Developer](https://aws.amazon.com/q/developer/)** | AWS-oriented AI coding assistant for completion, chat, security scans, and cloud transformation workflows. | **$19/user/month** (Pro tier) | **Free Tier**: 50 agentic requests/month, 1,000 lines of Java code transformation/month, and core IDE code suggestions. |
+| **[Continue (cloud / enterprise options)](https://www.continue.dev/)** | Commercial hub, centralized configuration, and team governance built on the Continue coding agent. | **$10/developer/month** (Team / Hub plan) | **Free Forever**: Open-source core with unlimited local model/BYO-API usage; **14-Day Free Trial** for Team/Hub features. |
+| **[Replit AI](https://replit.com/)** | AI assistance and autonomous Agent embedded in the Replit cloud IDE for building full-stack apps in the browser. | **$20/month** (Core plan, includes $20/mo AI credits) | **Starter Plan**: Free daily resetting Agent credits, basic AI completion, and 1 published app. |
 
 
 
